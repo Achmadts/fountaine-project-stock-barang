@@ -4,24 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stock Barang</title>
 </head>
 
 <body>
-    <h2>Tambah Nama Barang</h2>
-    <form action="list.html" method="POST">
+    <h2>Tambah Barang</h2>
+    <form action="list.html" method="POST" id="form-id">
         <br>
         <label for="Nama">Nama :</label>
-        <input type="text" id="Nama">
+        <input type="text" id="Nama" required>
         <br>
         <br>
         <label for="Alamat">Alamat :</label>
-        <input type="text" id="Alamat">
-        <br>
-        <br>
-        <label for="NoTelp">NoTelp :</label>
-        <input type="text" id="NoTelp">
-
+        <input type="text" id="Alamat" required>
         <br>
         <br>
         <label for="Barang">Barang :</label>
@@ -34,41 +29,57 @@
         <br>
         <br>
         <label for="merk">Merk :</label>
-        <label for="Roughneck">Roughneck</label>
         <input type="radio" id="Roughneck" name="ktg">
+        <label for="Roughneck">Roughneck</label>
 
-        <label for="3Second">3Second</label>
         <input type="radio" id="3Second" name="ktg">
+        <label for="3Second">3Second</label>
         <br>
         <br>
+        <label for="kondisiBrg">Kondisi Barang :</label>
+
+        <input type="checkbox" id="kondisiBrgBks" name="brg" onclick="limitCheckbox(this)">
+        <label for="kondisiBrgBks">Bekas</label>
+
+        <input type="checkbox" id="kondisiBrgBru" name="brg" onclick="limitCheckbox(this)">
+        <label for="kondisiBrgBru">Baru</label>
+
+        <br><br>
         <label for="JumlahBarang">Jumlah Barang :</label>
-        <input type="number" id="JumlahBarang">
+        <input type="number" id="JumlahBarang" min="1" required>
         <br>
         <br>
         <label for="Keterangan">Keterangan :</label>
         <br>
         <br>
-        <textarea id="Keterangan" name="Keterangan" rows="4" cols="49"></textarea>
-        <br>
-        <input type="submit" value="submit">
+        <textarea id="Keterangan" name="Keterangan" rows="4" cols="49" required></textarea>
+        <br><br>
+        <button>Kirim</button>
     </form>
-    <form action="Welcome.html" method="GET">
-        <input type="submit" value="Batal">
-        
-    </form>
+        <a href="welcome.html"><button>Batal</button></a>
+    <br>
     <button onclick="resetForm()">Ulang</button>
 
     <script>
         function resetForm() {
-            document.getElementById('Nama').value = "";
-            document.getElementById('Alamat').value = "";
-            document.getElementById('NoTelp').value = "";
-            document.getElementById('Barang').selectedIndex = 0;
-            document.getElementById('Roughneck').checked = false;
-            document.getElementById('3Second').checked = false;
-            document.getElementById('JumlahBarang').value = "";
-            document.getElementById('Keterangan').value = "";
+            document.getElementById("form-id").reset();
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
         }
+        function limitCheckbox(clickedCheckbox) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== clickedCheckbox) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+
+
     </script>
 </body>
 
