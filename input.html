@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Tambah Nama Barang</h2>
+    <form action="list.html" method="POST">
+        <br>
+        <label for="Nama">Nama :</label>
+        <input type="text" id="Nama">
+        <br>
+        <br>
+        <label for="Alamat">Alamat :</label>
+        <input type="text" id="Alamat">
+        <br>
+        <br>
+        <label for="NoTelp">NoTelp :</label>
+        <input type="text" id="NoTelp">
+
+        <br>
+        <br>
+        <label for="Barang">Barang :</label>
+        <select id="Barang">
+            <option></option>
+            <option>Baju</option>
+            <option>Celana</option>
+            <option>Hoodie</option>
+        </select>
+        <br>
+        <br>
+        <label for="merk">Merk :</label>
+        <label for="Roughneck">Roughneck</label>
+        <input type="radio" id="Roughneck" name="ktg">
+
+        <label for="3Second">3Second</label>
+        <input type="radio" id="3Second" name="ktg">
+        <br>
+        <br>
+        <label for="JumlahBarang">Jumlah Barang :</label>
+        <input type="number" id="JumlahBarang">
+        <br>
+        <br>
+        <label for="Keterangan">Keterangan :</label>
+        <br>
+        <br>
+        <textarea id="Keterangan" name="Keterangan" rows="4" cols="49"></textarea>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <form action="Welcome.html" method="GET">
+        <input type="submit" value="Batal">
+        
+    </form>
+    <button onclick="resetForm()">Ulang</button>
+
+    <script>
+        function resetForm() {
+            document.getElementById('Nama').value = "";
+            document.getElementById('Alamat').value = "";
+            document.getElementById('NoTelp').value = "";
+            document.getElementById('Barang').selectedIndex = 0;
+            document.getElementById('Roughneck').checked = false;
+            document.getElementById('3Second').checked = false;
+            document.getElementById('JumlahBarang').value = "";
+            document.getElementById('Keterangan').value = "";
+        }
+    </script>
+</body>
+
+</html>
