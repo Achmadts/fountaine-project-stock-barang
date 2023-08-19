@@ -63,11 +63,6 @@
     <script>
         function resetForm() {
             document.getElementById("form-id").reset();
-
-            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = false;
-            });
         }
         function limitCheckbox(clickedCheckbox) {
             const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
