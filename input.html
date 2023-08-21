@@ -11,8 +11,8 @@
     <h2>Tambah Barang</h2>
     <form action="list.html" method="POST" id="form-id">
         <br>
-        <label for="Nama">Nama :</label>
-        <input type="text" id="Nama" required>
+        <label for="Nama">Nama Barang :</label>
+        <input type="text" id="nama_barang" required>
         <br>
         <br>
         <label for="Alamat">Alamat :</label>
@@ -56,7 +56,7 @@
         <br><br>
         <button>Kirim</button>
     </form>
-        <a href="welcome.html"><button>Batal</button></a>
+    <a href="welcome.html"><button>Batal</button></a>
     <br>
     <button onclick="resetForm()">Ulang</button>
 
@@ -64,17 +64,16 @@
         function resetForm() {
             document.getElementById("form-id").reset();
         }
-        function limitCheckbox(clickedCheckbox) {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
 
-            checkboxes.forEach(checkbox => {
-                if (checkbox !== clickedCheckbox) {
-                    checkbox.checked = false;
+        function limitCheckbox(klikCheckbox) {
+            const checkbox = document.querySelectorAll('input[type="checkbox"][name="brg"]');
+
+            checkbox.forEach(box => {
+                if (box !== klikCheckbox) {
+                    box.checked = false;
                 }
             });
         }
-
-
     </script>
 </body>
 
