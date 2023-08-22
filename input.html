@@ -2,78 +2,117 @@
 <html lang="en">
 
 <head>
+    <style>
+
+        
+        option {
+            color: blue;
+        }
+
+        body {
+            background-size: cover;
+            background-image: url("https://asset-3s.3second.co.id/p/store/web_1664112542_GORONTALO.jpeg");
+        }
+
+        .mont {
+            padding: 15px;
+            box-shadow: 13px 12px 12 px grey;
+            font-size: 23px;
+            font-weight: 600;
+            width: 300px;
+            color: rgb(204, 14, 14);
+
+        }
+
+        button {
+            padding: 10px;
+            border: 1px solid gray;
+            background-color: #8ce38cd5;
+            border-radius: 5px;
+            font: inherit;
+            color: rgb(199, 43, 43)
+        }
+      
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
     <title>Stock Barang</title>
 </head>
 
 <body>
-    <h2>Tambah Barang</h2>
+    <h1 style="color: brown;" ><marquee>Tambah Barang</marquee></h1>
     <form action="list.html" method="POST" id="form-id">
         <br>
-        <label for="Nama">Nama Barang :</label>
-        <input type="text" id="nama_barang" required>
-        <br>
-        <br>
-        <label for="Alamat">Alamat :</label>
-        <input type="text" id="Alamat" required>
-        <br>
-        <br>
-        <label for="Barang">Barang :</label>
-        <select id="Barang">
-            <option></option>
-            <option>Baju</option>
-            <option>Celana</option>
-            <option>Hoodie</option>
-        </select>
-        <br>
-        <br>
-        <label for="merk">Merk :</label>
-        <input type="radio" id="Roughneck" name="ktg">
-        <label for="Roughneck">Roughneck</label>
+        <div class="mont">
+            <label for="Nama">Nama :</label>
+            <input type="text" id="Nama" required>
+            <br>
+            <br>
+            <label for="Alamat">Alamat :</label>
+            <input type="text" id="Alamat" required>
+            <br>
+            <br>
+            <label for="Barang">Barang :</label>
+            <select id="Barang">
+                <option></option>
+                <option>Baju</option>
+                <option>Celana</option>
+                <option>Hoodie</option>
+            </select>
+            <br>
+            <br>
+            <label for="merk">Merk :</label>
+            <input type="radio" id="Roughneck" name="ktg">
+            <label for="Roughneck">Roughneck</label>
 
-        <input type="radio" id="3Second" name="ktg">
-        <label for="3Second">3Second</label>
-        <br>
-        <br>
-        <label for="kondisiBrg">Kondisi Barang :</label>
+            <input type="radio" id="3Second" name="ktg">
+            <label for="3Second">3Second</label>
+            <br>
+            <br>
+            <label for="kondisiBrg">Kondisi Barang :</label>
 
-        <input type="checkbox" id="kondisiBrgBks" name="brg" onclick="limitCheckbox(this)">
-        <label for="kondisiBrgBks">Bekas</label>
+            <input type="checkbox" id="kondisiBrgBks" name="brg" onclick="limitCheckbox(this)">
+            <label for="kondisiBrgBks">Bekas</label>
 
-        <input type="checkbox" id="kondisiBrgBru" name="brg" onclick="limitCheckbox(this)">
-        <label for="kondisiBrgBru">Baru</label>
+            <input type="checkbox" id="kondisiBrgBru" name="brg" onclick="limitCheckbox(this)">
+            <label for="kondisiBrgBru">Baru</label>
 
-        <br><br>
-        <label for="JumlahBarang">Jumlah Barang :</label>
-        <input type="number" id="JumlahBarang" min="1" required>
+            <br><br>
+            <label for="JumlahBarang">Jumlah Barang :</label>
+            <input type="number" id="JumlahBarang" min="1" required>
         <br>
         <br>
         <label for="Keterangan">Keterangan :</label>
         <br>
         <br>
-        <textarea id="Keterangan" name="Keterangan" rows="4" cols="49" required></textarea>
-        <br><br>
+        <textarea  id="Keterangan" name="Keterangan" rows="4" cols="49" required></textarea>
+    </div>
+        <br>
         <button>Kirim</button>
     </form>
-    <a href="welcome.html"><button>Batal</button></a>
-    <br>
+        <a href="welcome.html"><button>Batal</button></a>
     <button onclick="resetForm()">Ulang</button>
-
     <script>
         function resetForm() {
             document.getElementById("form-id").reset();
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
         }
+        function limitCheckbox(clickedCheckbox) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
 
-        function limitCheckbox(klikCheckbox) {
-            const checkbox = document.querySelectorAll('input[type="checkbox"][name="brg"]');
-
-            checkbox.forEach(box => {
-                if (box !== klikCheckbox) {
-                    box.checked = false;
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== clickedCheckbox) {
+                    checkbox.checked = false;
                 }
             });
         }
+
+
     </script>
 </body>
 
