@@ -7,23 +7,3 @@ h1{
     box-shadow: 10px 5px 42px;
 }
 
-/* laptop*/
-@media (max-width: 1366px) {
-	html{
-		font-size: 85%;
-	}
-}
-
-/* Tablet*/
-@media (max-width: 758px) {
-	html{
-		font-size: 62.5%;
-	}
-}
-
-/* mobile phone*/
-@media (max-width: 450px) {
-	html{
-		font-size: 55%;
-	}
-}
