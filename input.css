@@ -7,9 +7,13 @@ h1{
     box-shadow: 10px 5px 42px;
 }
 span{
-	color: rgb(232, 206, 58);
+	color: gold;
 }
 
+.montt{
+	color: #000;
+
+}
 /* laptop*/
 @media (max-width: 1366px) {
 	html{
