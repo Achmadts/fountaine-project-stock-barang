@@ -3,7 +3,31 @@
 }
 
 h1{
-    text-align: center;
+    text-align: center; 
     box-shadow: 10px 5px 42px;
+}
+span{
+	color: rgb(232, 206, 58);
+}
+
+/* laptop*/
+@media (max-width: 1366px) {
+	html{
+		font-size: 100%;
+	}
+}
+
+/* Tablet*/
+@media (max-width: 758px) {
+	html{
+		font-size: 62.5%;
+	}
+}
+
+/* mobile phone*/
+@media (max-width: 450px) {
+	html{
+		font-size: 55%;
+	}
 }
 
