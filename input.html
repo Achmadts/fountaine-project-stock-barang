@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
 
         
@@ -11,26 +12,18 @@
 
         body {
             background-size: cover;
-            background-image: url("https://asset-3s.3second.co.id/p/store/web_1664112542_GORONTALO.jpeg");
+            background-image: url("https://mekari.com/wp-content/uploads/2022/02/gudang-berisi-stok-stok-barang.jpg");
         }
 
         .mont {
             padding: 15px;
             box-shadow: 13px 12px 12 px grey;
-            font-size: 23px;
+            font-size: 20px;
             font-weight: 600;
-            width: 300px;
-            color: rgb(204, 14, 14);
-
-        }
-
-        button {
-            padding: 10px;
-            border: 1px solid gray;
-            background-color: #8ce38cd5;
-            border-radius: 5px;
-            font: inherit;
-            color: rgb(199, 43, 43)
+            color: rgb(238, 210, 51);
+        } 
+        h1{
+            font-size: 3.5rem;
         }
       
     </style>
@@ -41,41 +34,41 @@
 </head>
 
 <body>
-    <h1 style="color: brown;" ><marquee>Tambah Barang</marquee></h1>
+    <h1 style="color: rgb(124, 182, 182);" >Tambah <span>Barang</span></h1>
     <form action="list.html" method="POST" id="form-id">
         <br>
         <div class="mont">
             <label for="Nama">Nama :</label>
-            <input type="text" id="Nama" required>
+            <input style="width: 250px;" class="form-control" type="text" id="Nama" required>
             <br>
             <br>
             <label for="Alamat">Alamat :</label>
-            <input type="text" id="Alamat" required>
+            <input  style="width: 250px;" class="form-control" type="text" id="Alamat" required>
             <br>
             <br>
             <label for="Barang">Barang :</label>
-            <select id="Barang">
+            <select style="width: 100px;" class="form-select" id="Barang">
                 <option></option>
-                <option>Baju</option>
+                <option>Baju</option> 
                 <option>Celana</option>
                 <option>Hoodie</option>
             </select>
             <br>
             <br>
             <label for="merk">Merk :</label>
-            <input type="radio" id="Roughneck" name="ktg">
+            <input class="form-check-input" type="radio" id="Roughneck" name="ktg">
             <label for="Roughneck">Roughneck</label>
 
-            <input type="radio" id="3Second" name="ktg">
+            <input class="form-check-input" type="radio" id="3Second" name="ktg">
             <label for="3Second">3Second</label>
             <br>
             <br>
             <label for="kondisiBrg">Kondisi Barang :</label>
 
-            <input type="checkbox" id="kondisiBrgBks" name="brg" onclick="limitCheckbox(this)">
+            <input class="form-check-input mt-0" type="checkbox" id="kondisiBrgBks" name="brg">
             <label for="kondisiBrgBks">Bekas</label>
 
-            <input type="checkbox" id="kondisiBrgBru" name="brg" onclick="limitCheckbox(this)">
+            <input class="form-check-input mt-0" type="checkbox" id="kondisiBrgBru" name="brg">
             <label for="kondisiBrgBru">Baru</label>
 
             <br><br>
@@ -86,34 +79,14 @@
         <label for="Keterangan">Keterangan :</label>
         <br>
         <br>
-        <textarea  id="Keterangan" name="Keterangan" rows="4" cols="49" required></textarea>
+        <textarea  class="form-control"  id="Keterangan" name="Keterangan" rows="4" cols="10" style="width: 350px;" required></textarea>
     </div>
         <br>
-        <button>Kirim</button>
+        <button class="btn btn-primary">Kirim</button>
+        <button class  ="btn btn-primary" type="reset">Ulang</button>
     </form>
-        <a href="welcome.html"><button>Batal</button></a>
-    <button onclick="resetForm()">Ulang</button>
-    <script>
-        function resetForm() {
-            document.getElementById("form-id").reset();
+    <a  href="welcome.html"><button class="btn btn-primary">Batal</button></a>
 
-            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = false;
-            });
-        }
-        function limitCheckbox(clickedCheckbox) {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"][name="brg"]');
-
-            checkboxes.forEach(checkbox => {
-                if (checkbox !== clickedCheckbox) {
-                    checkbox.checked = false;
-                }
-            });
-        }
-
-
-    </script>
 </body>
 
 </html>
