@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="welcome.css">
-    <title>welcome</title>
-
+    <title>Welcome</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container1{
+            margin-top: 10px;
+        }
+        center {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         button {
             background-color: #0074d9;
             color: #fff;
             padding: 10px 20px;
+            margin: 3px;
             border: none;
             cursor: pointer;
-            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
-            display: inline;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0.1);
+            border-radius: 5px;
+            transition: .5s;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 16.5px;
+            width: 100%;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <center>
-            <h1>Selamat Datang di stok barang PPLG!</h1>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="width: 100%;">
+        <div class="container">
+          <a href="#"><img src="WhatsApp_Image_2023-09-05_at_15.44.25__2_-removebg-preview.png" alt="Logo" width="26" height="25" class="d-inline-block align-text-top m-2 mt-3 mb-3"></a>
+          <a class="navbar-brand nav-link active mt-1"><i>Hotel RPL</i></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+        <a href="https://www.instagram.com/neskar.story/"><img src="WhatsApp_Image_2023-09-05_at_15.44.25-removebg-preview.png" width="41" height="40" class="mx-sm-0 mb-0"></a>
+        </div>
+      </nav>
+    <center>
+        <div class="container1">
+            <h1>Selamat Datang di Hotel RPL!</h1>
             <p>Tempat Kenyamanan dan Keramahan Berpadu.</p>
             <br>
             <a href="input.html" style="text-decoration: none;"><button>input</button></a>
             <a href="list.html" style="text-decoration: none;"><button>list</button></a>
-            <a href="login.html" style="text-decoration: none;"><button>kembali</button></a>
-        </center>
-    </div>
+            <a href="login.html" style="text-decoration: none;"><button>Logout</button></a>
+        </div>
+    </center>
+    <footer class="mt-5 p-1 text-center">
+        <p class="fw-bold mt-3">Fountaine Project &COPY; 2023</p>
+    </footer>
 </body>
-
 </html>
