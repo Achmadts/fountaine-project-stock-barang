@@ -11,7 +11,7 @@ span{
 }
 
 .montt{
-	color: #000;
+	color: gray;
 
 }
 /* laptop*/
@@ -34,4 +34,5 @@ span{
 		font-size: 55%;
 	}
 }
+
 
